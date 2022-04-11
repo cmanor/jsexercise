@@ -1,15 +1,15 @@
 //reverse a number
-function chaChaSlide(n) {
-	n = n + "";
-	return n.split("").reverse().join("");
-}
+const chaChaSlide = (n) => 
+  Array.from(n.toString()).reverse().join('');
 
 //string in alphabetical order
-aOrder = (str) => str.split('').sort().join('');
+aOrder = (str) => 
+  Array.from(str).sort().join('');
 
   //first letter of each word to uppercase.
 
-  function uppercase(str) {
+uppercase = (str) => 
+{
   var array1 = str.split(' ');
   var newarray1 = [];
   for(var x = 0; x < array1.length; x++) {
@@ -26,7 +26,7 @@ function testPrime(n) {
 } else if(n === 2) {
     return true;
   }else {
-    for(var i = 2; x < n; i++) {
+    for(var i = 2; i < n; i++) {
       if(n % i === 0) {
         return false;
       }
@@ -51,7 +51,7 @@ function unique_char(str1) {
 }  
 
 console.log(chaChaSlide(349210));
-console.log(aOrder("webmaster"));
+console.log(aOrder("weebmaster"));
 console.log(uppercase("the quick brown fox"));
 console.log(testPrime(69));
 console.log(unique_char("thequickbrownfoxjumpsoverthelazydog"));
